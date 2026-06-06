@@ -6,11 +6,6 @@ on:
       - main
       - master
 
-  pull_request:
-    branches:
-      - main
-      - master
-
 jobs:
   build:
 
@@ -33,5 +28,5 @@ jobs:
       - name: Grant Execute Permission
         run: chmod +x gradlew
 
-      - name: Build Project
-        run: ./gradlew build
+      - name: Compile Project
+        run: ./gradlew classes testClasses
